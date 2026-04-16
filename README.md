@@ -1,36 +1,24 @@
 # 💰 Expense Tracker (Python + SQLite)
 
-A feature-rich CLI-based Expense Tracker built using Python and SQLite with data analysis and visualization capabilities.
+A CLI-based Expense Tracker with data analysis and visualization.
 
 ---
 
 ## 🚀 Features
-
-- Add, view, and delete expenses (CRUD operations)
-- Store data using SQLite database
-- Monthly expense aggregation using SQL (GROUP BY)
+- CRUD operations using SQLite
+- Monthly expense aggregation using SQL
 - Data visualization using Matplotlib
-- Simple and user-friendly CLI interface
 
 ---
 
-## 🛠 Tech Stack
+## 📂 Project Structure
 
-- Python
-- SQLite
-- Matplotlib
+expense-tracker/
 
 ---
 
-## 📊 Data Analysis
-
-- Monthly expense summary
-- Aggregated insights using SQL queries
-- Visual representation using bar charts
-
----
-
-## ▶️ How to Run
+## ▶️ Run
 
 ```bash
+cd expense-tracker
 python main.py
