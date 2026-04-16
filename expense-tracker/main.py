@@ -1,5 +1,5 @@
 from database import connect, add_expense, view_expenses, delete_expense, monthly_summary
-
+from analysis import plot_monthly_expenses
 def menu():
     print("\n===== Expense Tracker =====")
     print("1. Add Expense")
