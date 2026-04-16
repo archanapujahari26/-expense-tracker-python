@@ -1,5 +1,6 @@
 from database import connect, add_expense, view_expenses, delete_expense, monthly_summary
 from analysis import plot_monthly_expenses
+from export import export_to_csv
 
 def menu():
     print("\n===== Expense Tracker =====")
