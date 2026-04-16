@@ -1,4 +1,4 @@
-from database import connect, add_expense, view_expenses, delete_expense
+from database import connect, add_expense, view_expenses, delete_expense, monthly_summary
 
 def menu():
     print("\n===== Expense Tracker =====")
@@ -6,6 +6,7 @@ def menu():
     print("2. View Expenses")
     print("3. Delete Expense")
     print("4. Exit")
+    print("5. Monthly Summary")
 
 def main():
     connect()
@@ -37,6 +38,12 @@ def main():
         elif choice == '4':
             print("Exiting...")
             break
+
+        elif choice == '5':
+            summary = monthly_summary()
+            print("\n--- Monthly Summary ---")
+            for month, total in summary:
+                print(f"{month} : {total}")
 
         else:
             print("Invalid choice!")
