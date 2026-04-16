@@ -47,3 +47,17 @@ def delete_expense(expense_id):
     cursor.execute("DELETE FROM expenses WHERE id=?", (expense_id,))
     conn.commit()
     conn.close()
+
+def monthly_summary():
+    conn = sqlite3.connect("expenses.db")
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT strftime('%Y-%m', date) as month, SUM(amount)
+        FROM expenses
+        GROUP BY month
+    """)
+
+    data = cursor.fetchall()
+    conn.close()
+    return data
