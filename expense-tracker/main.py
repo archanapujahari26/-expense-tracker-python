@@ -10,6 +10,7 @@ def menu():
     print("4. Exit")
     print("5. Monthly Summary")
     print("6. Show Expense Chart")
+    print("7. Export to CSV")
 
 def main():
     connect()
@@ -50,6 +51,9 @@ def main():
 
         elif choice == '6':
             plot_monthly_expenses()
+
+        elif choice == '7':
+            export_to_csv()
 
         else:
             print("Invalid choice!")
