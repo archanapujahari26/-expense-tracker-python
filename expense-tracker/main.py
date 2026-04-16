@@ -1,5 +1,6 @@
 from database import connect, add_expense, view_expenses, delete_expense, monthly_summary
 from analysis import plot_monthly_expenses
+
 def menu():
     print("\n===== Expense Tracker =====")
     print("1. Add Expense")
@@ -7,6 +8,7 @@ def menu():
     print("3. Delete Expense")
     print("4. Exit")
     print("5. Monthly Summary")
+    print("6. Show Expense Chart")
 
 def main():
     connect()
@@ -44,6 +46,9 @@ def main():
             print("\n--- Monthly Summary ---")
             for month, total in summary:
                 print(f"{month} : {total}")
+
+        elif choice == '6':
+            plot_monthly_expenses()
 
         else:
             print("Invalid choice!")
