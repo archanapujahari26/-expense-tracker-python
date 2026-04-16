@@ -3,4 +3,5 @@ __pycache__/
 *.pyo
 *.pyd
 expenses.db
+expenses.csv
 .env
